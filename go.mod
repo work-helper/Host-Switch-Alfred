@@ -1,0 +1,1 @@
+module Hosts-Switch-Alfred
