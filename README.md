@@ -9,10 +9,12 @@
 
 ## 实现
 实现过程很简单，使用Alfred过程中发现一行代码也不需要写，直接自带功能就足以满足上述需求，整个workflow如下所示：
+
 ![](http://imgblog.mrdear.cn/1554645326.png?imageMogr2/thumbnail/!100p)
 
 ### 输入
 该workflow的输入是准备好的不同环境的hosts文件，每一个环境对应一个文件，方便自己区分，也方便CURD操作。
+
 ![](http://imgblog.mrdear.cn/1554645307.png?imageMogr2/thumbnail/!100p)
 
 ### 替换
@@ -37,6 +39,8 @@ open $query
 ## 使用
 1. 在`List Filter`节点中，添加自己的hosts文件配置。
 2. **修改替换脚本中的密码**
+3. 输入`hs`指令, 会自动列出相关的文件配置,然后`enter`自动替换.
+4. 当列出文件配置后,按住`cmd`, 然后`enter`会调用系统的open指令打开文件,这里可以换成自己常用的编辑器.
 
 ## 其他
 由于都是利用shell进行操作，因此可扩展性很强，利用hosts翻墙的话，可以直接写一个shell脚本，在shell获取hosts输入，然后写入到`/etc/hosts`中。
